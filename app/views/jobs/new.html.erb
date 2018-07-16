@@ -17,16 +17,12 @@
   <%= f.label :start_time,'Start'  %>
   <%= f.datetime_field :start_time %>
 
-  <%= f.label :end_time,'Stop'  %>
-  <%= f.datetime_field :end_time %>
-
   <%= f.label :project_id,'Project'  %>
-  <%= f.select :project_id, Project.pluck(:description, :id) %>
+  <%= f.select :project_id, @current_user.projects.pluck(:description, :id) %>
 
 
 
 
   <%= f.submit "Start project" %>
-  <%= f.submit "Stop project" %>
 
 <% end %>

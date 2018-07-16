@@ -1,7 +1,7 @@
 <h1>Jobs#index</h1>
 <p>Find me in app/views/jobs/index.html.erb</p>
 
-<% @current_user.jobs.each do |job| %>
+<% @jobs.each do |job| %>
 <p>
   <%= link_to job.description, job_path(job.id) %>
 </p>

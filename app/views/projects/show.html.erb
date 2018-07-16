@@ -1,20 +1,22 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<h1>Project description:<%= @project.description %></h1>
 
-
-<h1><%= @project.description %></h1>
-
-<ul>
-  <li><%= @.description %></li>
+<!-- <ul>
   <% if @project.description.present? %>
-
+    <li><%= @project.description %></li>
   <% end %>
-  <li>Name: <%= @project.description %></li>
-  <li>Project: <%= @job.description %></li>
+  <li>Project: <%= @project.description %></li>
 
-</ul>
+</ul> -->
+
+<h2>Jobs:</h2>
+<% @project.jobs.each do |job| %>
+<p>Details about job:
+  <%= link_to job.description, job_path(job.id) %>
+
+</p>
+<% end %>
 
 <div class="controls">
 
-  <%= link_to 'Delete job', job_path(@project), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+  <%= link_to 'Delete project', project_path(@project), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 </div>

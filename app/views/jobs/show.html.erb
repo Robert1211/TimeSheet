@@ -1,18 +1,31 @@
-<h1>Jobs#show</h1>
-<p>Find me in app/views/jobs/show.html.erb</p>
-<h1><%= @job.description %></h1>
 
+<!-- <h1><%= @job.description %></h1> -->
+<h1>All details about you job</h1>
 <ul>
+
+
+
   <li><%= @job.description %></li>
   <% if @job.description.present? %>
-    <li>User: <%# link_to @job.project.user.name, @job.project.user %></li>
-  <% end %>
-  <li>Name: <%= @job.description %></li>
-  <li>Project: <%= @job.description %></li>
 
+  <% end %>
+ <!-- <li>Name: <%= @job.description %></li>
+  <li>Project: <%= @job.description %></li> -->
+----------------------
+  <!-- TODO time in words -->
+  <% if @job.duration %>
+    <li>Duration: <%= Time.at(@job.duration).utc.strftime("%H:%M:%S")
+ %></li>
+  <% else %>
+    <li>Time: <span id="stopwatch" data-start="<%= Time.now - @job.start_time%>">00:00:00</span><%= button_to "Stop job", job_stop_path(@job)%></li>
+  <% end %>
 </ul>
 
 <div class="controls">
-  <%= link_to 'Edit job', edit_job_path(@job) %>
+  <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
+  <%= link_to 'Sand report', edit_job_path(@job) %>
   <%= link_to 'Delete job', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 </div>
+
+
+<p>Find me in app/views/jobs/show.html.erb</p>

@@ -5,7 +5,7 @@ class Job < ApplicationRecord
 
 
   def duration
-    end_time - start_time
+    end_time - start_time if (end_time.present? && start_time.present?)
   end
 end
 
