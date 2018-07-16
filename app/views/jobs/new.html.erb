@@ -1,0 +1,32 @@
+<h1>Jobs#new</h1>
+<p>Find me in app/views/jobs/new.html.erb</p>
+
+<% if @current_user.present? %>
+  <h1>Welcome  <%= @current_user.name %></h1>
+  <%# TODO: get the last project OF THE  %>
+  <h2><%# Project.last.name %></h2>
+  <p><%# Project.last.description %></p>
+  <p> <%# Project.last.project_id %></p>
+<% end %>
+
+<%= form_for @job do |f| %>
+
+  <%= f.label :description,'details'  %>
+  <%= f.text_field :description %>
+
+  <%= f.label :start_time,'Start'  %>
+  <%= f.datetime_field :start_time %>
+
+  <%= f.label :end_time,'Stop'  %>
+  <%= f.datetime_field :end_time %>
+
+  <%= f.label :project_id,'Project'  %>
+  <%= f.select :project_id, Project.pluck(:description, :id) %>
+
+
+
+
+  <%= f.submit "Start project" %>
+  <%= f.submit "Stop project" %>
+
+<% end %>

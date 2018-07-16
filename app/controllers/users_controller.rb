@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path # Redirect to home if the account is valid
+      redirect_to new_project_path # Redirect to home if the account is valid
     else
       render :new # Let them retry the form again
     end
@@ -21,6 +21,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation) 
   end
 end

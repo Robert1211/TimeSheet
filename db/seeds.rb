@@ -25,3 +25,7 @@ j1 = Job.create(
 :end_time => '2013-02-02 02:00:00',
 :project_id => p1.id
 )
+
+# Associations
+u1.projects << p1
+p1.jobs << j1

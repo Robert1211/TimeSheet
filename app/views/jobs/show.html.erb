@@ -1,0 +1,18 @@
+<h1>Jobs#show</h1>
+<p>Find me in app/views/jobs/show.html.erb</p>
+<h1><%= @job.description %></h1>
+
+<ul>
+  <li><%= @job.description %></li>
+  <% if @job.description.present? %>
+    <li>User: <%# link_to @job.project.user.name, @job.project.user %></li>
+  <% end %>
+  <li>Name: <%= @job.description %></li>
+  <li>Project: <%= @job.description %></li>
+
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit job', edit_job_path(@job) %>
+  <%= link_to 'Delete job', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

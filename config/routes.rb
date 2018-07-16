@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
   root :to => 'pages#home'
   resources :users, :only => [:new, :create, :index]
-  resources :mixtapes, :only => [:new, :create]
+  resources :jobs
+  resources :projects
+   resources :name, :only => [:new, :create]
+  get '/login/' => 'session#new' # for login form
+  post '/login' => 'session#create' # for a login
+  
 
-  get '/login' => 'session#new' # login form
-  post '/login' => 'session#create' # perform a login
-  delete '/login' => 'session#destroy' # perform a log out
+
+  delete '/login' => 'session#destroy' #  log out
+
+
+
 end

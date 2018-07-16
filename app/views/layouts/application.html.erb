@@ -12,6 +12,9 @@
     <nav>
       <%= link_to 'Home', root_path %>
       <% if @current_user.present? %>
+      
+        <%= link_to 'Current Projects', projects_path %>
+        <%= link_to 'New Project', new_project_path %>
         <%= link_to 'Email addresses', users_path if @current_user.admin? %>
         <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
       <% else %>

@@ -1,0 +1,13 @@
+<h1>Projects#index</h1>
+<p>Find me in app/views/projects/index.html.erb</p>
+
+
+
+
+<% @current_user.projects.each do |project| %>
+<p>
+  <%= link_to project.description, project_path(project.id) %>
+  <%= link_to 'Delete project', project_path(project), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+
+</p>
+<% end %>
