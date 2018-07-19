@@ -1,24 +1,22 @@
 # README
+# Timesheet
+### name:Timesheet_app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Link to the live Site
+ https://robert1211.github.io/project0/
 
-Things you may want to cover:
 
-* Ruby version
+ This Game has been developed to use the characters 'O' and 'X'to represent players  users need not create players, include a reset button so that when a game ends, the board can be cleared and a new game can begin.
 
-* System dependencies
+Use only: JavaScript, jQuery, HTML, CSS, Atom
 
-* Configuration
+1. Create a file on desktop;
+2. Write pseudo code;
+3. Planing how logic working in Tic Tac Toe;
+4. Planing all function;
+5. Testing;
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feature:
+- Game for two players;
+- Display who is 'WIN' or 'DRAW';
+- Reset button;

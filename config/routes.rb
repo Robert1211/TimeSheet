@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, :only => [:new, :create, :index]
   resources :jobs
   post '/jobs/:id/stop' => 'jobs#stop', :as => 'job_stop'
-   # post '/jobs/:id/pause' => 'job#pause', :as => 'job_stop' 
+
   resources :projects
    resources :name, :only => [:new, :create]
   get '/login/' => 'session#new' # for login form
