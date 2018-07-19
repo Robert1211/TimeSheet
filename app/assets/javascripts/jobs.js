@@ -57,18 +57,8 @@ $(document).ready(function () {
 
 
   $("#finishJob").click(function(){
-    // console.log("Job stopped");
     $("#stopwatch").stopwatch("toggle");
     $("#duration").stopwatch("toggle");
-    // $.ajax({
-    //   // type: "GET",
-    //   // dataType: "json",
-    //   url: window.location.href,
-    //   success: function (data){
-    //     // console.log(data);
-    //     $("#finishJob").load("/jobs_controller/show #totalDuration")
-    //   }
-    // })
   })
 });
  // clock on display

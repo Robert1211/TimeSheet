@@ -1,3 +1,5 @@
+<div id="show">
+
 <h1>Project description:<%= @project.description %></h1>
 
 <!-- <ul>
@@ -7,7 +9,6 @@
   <li>Project: <%= @project.description %></li>
 
 </ul> -->
-
 <h2>Jobs:</h2>
 <% @project.jobs.each do |job| %>
 <p>Details about job:
@@ -20,4 +21,5 @@
 <div class="controls">
 
   <%= link_to 'Delete project', project_path(@project), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
 </div>

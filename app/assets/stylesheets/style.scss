@@ -2,34 +2,50 @@ body{
 max-width: 800px;
 margin: 0 auto;
 background-color: lightblue;
-
+font-family: 'Inconsolata', monospace;
+font-size: 26px;
 }
 
-
+div, .robi {
+  color: white!important;
+}
 
 .nav a {
- // margin-right: auto;
  color: white;
  margin:auto;
  margin-top: 20px;
  margin-bottom: 30px;
- // margin: 24px 16px 23px -1px;
- // margin-top: 32px;
- // margin-bottom: 70px;
  font-size: 18px;
- // margin-left: 115px
+
   }
  .container{
    color: white;
  }
 
 .login-box {
-  background-color: white;
+  // background-color: white;
+  // color: black!important;
   padding: 1em;
   border-radius: 1em;
 }
 #pro{
   color: white;
+}
+#show{
+  color: white;
+}
+.robi{
+  color: white;
+}
+.robic{
+  color: white;
+  margin: 0px 0px 0px 165px;
+}
+.click{
+  font-size: 60px;
+  color: red;
+  text-align: center;
+  font-family: 'Secular One', sans-serif;
 }
 
 // clock on front
@@ -39,7 +55,7 @@ html,body {
 }
 body {
     background: #0f3854;
-    background: radial-gradient(ellipse at center,  #789aa3  0%, #f8f8f8 180%);
+    background: radial-gradient(ellipse at center,  #154451  0%, #080606 180%);
     background-size: 100%;
 }
 
