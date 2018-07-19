@@ -1,28 +1,27 @@
-<h1>Jobs#new</h1>
-<p>Find me in app/views/jobs/new.html.erb</p>
 
-<% if @current_user.present? %>
+ <% if @current_user.present? %>
   <h1>Welcome  <%= @current_user.name %></h1>
   <%# TODO: get the last project OF THE  %>
   <h2><%# Project.last.name %></h2>
   <p><%# Project.last.description %></p>
   <p> <%# Project.last.project_id %></p>
-<% end %>
+ <% end %>
+   <div class="row">
+    <div class="col-md-7 offset-md-2">
+     <div class="form-group login-box">
+       <%= form_for @job do |f| %>
 
-<%= form_for @job do |f| %>
+        <%= f.label :description,'details'  %>
+        <%= f.text_field :description, class: "form-control" %>
 
-  <%= f.label :description,'details'  %>
-  <%= f.text_field :description %>
+        <%= f.label :start_time,'Start'  %>
+        <%= f.datetime_field :start_time, class: "form-control" %>
 
-  <%= f.label :start_time,'Start'  %>
-  <%= f.datetime_field :start_time %>
+        <%= f.label :project_id,'Project'  %>
+        <%= f.select :project_id, @current_user.projects.pluck(:name, :id), class: "form-control" %>
 
-  <%= f.label :project_id,'Project'  %>
-  <%= f.select :project_id, @current_user.projects.pluck(:description, :id) %>
-
-
-
-
-  <%= f.submit "Start project" %>
-
-<% end %>
+        <%= f.submit "Start project", class: "btn btn-primary" %>
+       <% end %>
+      </div>
+     </div>
+    </div>

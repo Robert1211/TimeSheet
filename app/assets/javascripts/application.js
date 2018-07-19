@@ -14,4 +14,8 @@
 //= require activestorage
 //= require jquery
 //= require jquery.stopwatch
+//= require popper
+//= require bootstrap
+//= require vue
+
 //= require_tree .

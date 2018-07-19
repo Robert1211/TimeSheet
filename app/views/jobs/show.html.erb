@@ -1,31 +1,51 @@
+<% if @job.end_time.present? %>
+<div class="col-md-8 offset-md-3">
+  <h2><%= @job.description %></h2>
 
-<!-- <h1><%= @job.description %></h1> -->
-<h1>All details about you job</h1>
-<ul>
+   <p>
+     Total time spent: <span><%= Time.at(@job.duration).utc.strftime("%H:%M:%S") %></span>
+   </p>
 
-
-
-  <li><%= @job.description %></li>
-  <% if @job.description.present? %>
-
-  <% end %>
- <!-- <li>Name: <%= @job.description %></li>
-  <li>Project: <%= @job.description %></li> -->
-----------------------
-  <!-- TODO time in words -->
-  <% if @job.duration %>
-    <li>Duration: <%= Time.at(@job.duration).utc.strftime("%H:%M:%S")
- %></li>
-  <% else %>
-    <li>Time: <span id="stopwatch" data-start="<%= Time.now - @job.start_time%>">00:00:00</span><%= button_to "Stop job", job_stop_path(@job)%></li>
-  <% end %>
-</ul>
-
-<div class="controls">
-  <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
-  <%= link_to 'Sand report', edit_job_path(@job) %>
-  <%= link_to 'Delete job', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+   <p>Current Time: <span id="startTime"></span></p>
 </div>
+<div class="col-md-8 offset-md-3">
+  <div class="controls">
+    <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
+    <!-- <button type="button" class="btn btn-danger">Delete</button> -->
+    <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
+    <!--button class="btn btn-primary" type="submit">Send mail</button-->
+  </div>
+</div>
+<% else %>
+  <div class="col-md-8 offset-md-3">
+    <h2><%= @job.description %></h2>
 
+     <p>
+       Total time spent: <span id="stopwatch" class="time" data-start="<%= @job.duration %>">00:00:00</span>
+     </p>
 
-<p>Find me in app/views/jobs/show.html.erb</p>
+     <div class="input-group mb-3">
+       <div class="input-group-append">
+         <%= form_for @job do |f| %>
+           <%= f.hidden_field :duration %>
+           <%= f.submit 'Job Finish', :class => 'btn btn-primary' %>
+         <% end %>
+       </div>
+
+     </div>
+     <p>Current Time: <span id="startTime"></span></p>
+     <p>Duration: <span id="duration" class="time">00:00:00</span></p>
+  </div>
+  <div class="col-md-8 offset-md-3">
+    <div class="input-group mb-3">
+      <div class="input-group-append">
+       <button class="btn btn-outline-secondary" type="button" id="pauseJob">Pause Job</button>
+      </div>
+  </div>
+  <div class="controls">
+    <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
+    <!-- <button type="button" class="btn btn-danger">Delete</button> -->
+    <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
+    <!--button class="btn btn-primary" type="submit">Send mail</button-->
+  </div>
+<% end %>

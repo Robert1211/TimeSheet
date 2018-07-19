@@ -1,11 +1,13 @@
 
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
+<div class= "container">
+<h1 class="col-md-6 offset-md-4" class="c" >Click Time </h1>
 <% if @current_user.present? %>
-  <h1>Welcome  <%= @current_user.name %></h1>
-  <%= @now %>
-
-
+  <h1 class="col-md-6 offset-md-4" >Welcome  <%= @current_user.name %></h1>
+  <!-- <%= @now %> -->
 <% end %>
+</div>
+
+<div id="clock">
+    <p class="date">{{ date }}</p>
+    <p class="time">{{ time }}</p>
+</div>

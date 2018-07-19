@@ -1,0 +1,75 @@
+body{
+max-width: 800px;
+margin: 0 auto;
+background-color: lightblue;
+
+}
+
+
+
+.nav a {
+ // margin-right: auto;
+ color: white;
+ margin:auto;
+ margin-top: 20px;
+ margin-bottom: 30px;
+ // margin: 24px 16px 23px -1px;
+ // margin-top: 32px;
+ // margin-bottom: 70px;
+ font-size: 18px;
+ // margin-left: 115px
+  }
+ .container{
+   color: white;
+ }
+
+.login-box {
+  background-color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+#pro{
+  color: white;
+}
+
+// clock on front
+
+html,body {
+    height: 100%;
+}
+body {
+    background: #0f3854;
+    background: radial-gradient(ellipse at center,  #789aa3  0%, #f8f8f8 180%);
+    background-size: 100%;
+}
+
+
+p {
+    margin: 0;
+    padding: 0;
+}
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+    .time {
+        letter-spacing: 0.05em;
+        font-size: 80px;
+        padding: 5px 0;
+    }
+    .date {
+        letter-spacing: 0.1em;
+        font-size: 24px;
+    }
+    .text {
+        letter-spacing: 0.1em;
+        font-size: 12px;
+        padding: 20px 0 0;
+    }
+}

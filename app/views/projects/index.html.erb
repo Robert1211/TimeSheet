@@ -1,13 +1,23 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<!-- <h1>Projects#index</h1>
+<p>Find me in app/views/projects/index.html.erb</p> -->
 
-
+<div class="col-md-6 offset-md-4" id="pro">
 
 <% @current_user.projects.each do |project| %>
-<p> Project name:
-  <!-- <%= link_to project.description, project_path(project.id) %> -->
-  <%= link_to project.name, project_path(project.id) %>
-  <%= link_to 'Delete project', project_path(project), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+<p id="pro"> Project name:
 
+  <%= link_to project.name, project_path(project.id) %>
+  <p id="pro">  Project status:
+    <%#  SELECT COUNT(*) FROM "jobs" WHERE "jobs"."project_id" = $1 AND "jobs"."end_time" IS NULL %>
+    <% if project.jobs.where(:end_time => nil).count > 0 %>
+      Active
+    <% elsif project.jobs.count == 0 %>
+      Open
+    <% else %>
+      Complete (<%= Time.at(project.jobs.pluck(:duration).sum).utc.strftime("%H:%M:%S") %>)
+    <% end %>
+  </p>
+  <%= link_to 'Delete project', project_path(project), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 </p>
 <% end %>
+</div>

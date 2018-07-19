@@ -11,10 +11,11 @@
 <h2>Jobs:</h2>
 <% @project.jobs.each do |job| %>
 <p>Details about job:
-  <%= link_to job.description, job_path(job.id) %>
-
+  <%= link_to job.description, job_path(job.id) %>    <!--only job from this projects !!!!!!!!!!!!!-->
 </p>
 <% end %>
+
+<%= link_to 'New job', new_job_path %>
 
 <div class="controls">
 
