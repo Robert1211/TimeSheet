@@ -15,20 +15,7 @@ class JobsController < ApplicationController
      redirect_to job.project
    end
 
-   # def pause
-   #   job = Job.find params[:id]
-   #   job.update :start_time => Time.current
-   #   job.save
-   #   redirect_to job.project
-   # end
-   #
-   # def endpause
-   #   job = Job.find params[:id]
-   #   job.update :end_time => Time.current
-   #   # redirect_to job.project
-   # end
-
-  def new
+   def new
       @job = Job.new
       @job.start_time = Time.current
   end

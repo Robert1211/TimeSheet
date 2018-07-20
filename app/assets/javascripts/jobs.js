@@ -9,7 +9,7 @@ $(document).ready(function () {
       document.getElementById("startTime").innerHTML = start;
     }
   }
-
+  
   if ($('#job_duration').length === 0) {
     return;
   }
