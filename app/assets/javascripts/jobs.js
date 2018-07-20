@@ -8,8 +8,8 @@ $(document).ready(function () {
     if (document.getElementById("startTime")) {
       document.getElementById("startTime").innerHTML = start;
     }
-  }
-  
+  } 
+
   if ($('#job_duration').length === 0) {
     return;
   }

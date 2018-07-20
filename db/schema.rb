@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_07_18_065805) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "plpgsql" 
 
   create_table "jobs", force: :cascade do |t|
     t.text "description"
@@ -42,4 +42,4 @@ ActiveRecord::Schema.define(version: 2018_07_18_065805) do
     t.datetime "updated_at", null: false
   end
 
-end 
+end

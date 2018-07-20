@@ -9,3 +9,4 @@ Rails.application.routes.draw do
   post '/login' => 'session#create' # for a login
   delete '/login' => 'session#destroy' #  log out
 end
+ 
