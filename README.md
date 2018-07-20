@@ -26,10 +26,6 @@ Help me more understand build application like timesheet.
 1. Add some statistic chart
 1. improve style
 
-**ISSUES**
-
-poor style
-
 
 **License**
  open
