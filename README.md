@@ -1,6 +1,5 @@
-
+https://infinite-scrubland-70213.herokuapp.com
 # README
-https://infinite-scrubland-70213.herokuapp.com/
 **Introduction**
 
 ClickTime - is easy business application for everyone.
