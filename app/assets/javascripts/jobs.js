@@ -1,22 +1,20 @@
-$(document).ready(function () {
-  // clock
- let timeWatch = setInterval(getCurrentTime, 1000);
+$(document).ready(function () { // clock
+  let timeWatch = setInterval(getCurrentTime, 1000);
 
   function getCurrentTime(){
     var d = new Date();
     let start = d.toLocaleTimeString();
     if (document.getElementById("startTime")) {
-      document.getElementById("startTime").innerHTML = start;
+       document.getElementById("startTime").innerHTML = start;
     }
-  } 
-
-  if ($('#job_duration').length === 0) {
-    return;
   }
 
+  if ($('#job_duration').length === 0) {
+   return;
+  }
   const startTime = $('#stopwatch').data('start') * 1000;
 
-  $('#stopwatch').stopwatch({startTime: parseInt(startTime)}).stopwatch('start');
+  $('#stopwatch').stopwatch({startTime:    parseInt(startTime)}).stopwatch('start');
 
   const durationTime = $('#duration').data('start') * 1000;
 
@@ -25,26 +23,23 @@ $(document).ready(function () {
   $("#pauseJob").click(function(){
     let value = $("#pauseJob")[0].innerHTML
     // console.log(value);
-    if (value==="Pause Job") {
-      //pause the watch
+    if (value==="Pause Job") {  //pause the watch
       clearInterval(timeWatch);
-      //pause the stopwatch
-      $("#duration").stopwatch("toggle");
+      $("#duration").stopwatch("toggle"); //pause the stopwatch
       $("#stopwatch").stopwatch("toggle");
       //change button to "resume"
       $("#pauseJob")[0].innerHTML = "Resume";
-    } else if (value === "Resume") {
-      //resume to counting time
-      //continue the time
-      setInterval(getCurrentTime, 1000);
-      //resume the stopwatch
-      $("#duration").stopwatch("start");
-      $("#stopwatch").stopwatch("start");
-      //change button to "pause" for the next pause
-      $("#pauseJob")[0].innerHTML = "Pause Job";
+    }else if (value === "Resume") {
+        //resume to counting time
+        //continue the time
+        setInterval(getCurrentTime, 1000);
+        //resume the stopwatch
+        $("#duration").stopwatch("start");
+        $("#stopwatch").stopwatch("start");
+        //change button to "pause" for the next pause
+        $("#pauseJob")[0].innerHTML = "Pause Job";
     }
   })
-
   //AJAX
   setInterval(function(){
     const duration = $("#stopwatch")[0].innerHTML;
@@ -61,7 +56,7 @@ $(document).ready(function () {
     $("#duration").stopwatch("toggle");
   })
 });
- // clock on display
+// clock on display
 var clock;
 $(document).ready(function () {
   if ($('#clock').length === 0) {
@@ -75,7 +70,6 @@ $(document).ready(function () {
           date: ''
       }
   });
-
 });
 
 var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
