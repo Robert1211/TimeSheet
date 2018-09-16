@@ -1,13 +1,13 @@
 <!-- <h1>Projects#index</h1>
 <p>Find me in app/views/projects/index.html.erb</p> -->
 
-<div class="col-md-6 offset-md-4" id="pro">
+<div class="col-md-6 offset-md-4" id=project-name>
 
 <% @current_user.projects.each do |project| %>
-<p id="pro"> Project name:
+<p id=project-name> Project name:
 
   <%= link_to project.name, project_path(project.id) %>
-  <p id="pro">  Project status:
+  <p id=project-name>  Project status:
     <%#  SELECT COUNT(*) FROM "jobs" WHERE "jobs"."project_id" = $1 AND "jobs"."end_time" IS NULL %>
     <% if project.jobs.where(:end_time => nil).count > 0 %>
       Active
