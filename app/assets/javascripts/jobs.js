@@ -56,7 +56,7 @@ $(document).ready(function () { // clock
     $("#duration").stopwatch("toggle");
   })
 });
-// clock on display
+// main clock with date on display 
 var clock;
 $(document).ready(function () {
   if ($('#clock').length === 0) {
