@@ -43,12 +43,13 @@
     <div class="input-group mb-3">
       <div class="input-group-append">
        <button class="btn btn-outline-secondary" type="button" id="pauseJob">Pause Job</button>
+       <button class="btn btn-outline-secondary" type="button" id="pauseJob">Send email</button>
       </div>
   </div>
   <div class="controls">
-    <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
-    <!-- <button type="button" class="btn btn-danger">Delete</button> -->
+
     <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
-    <!--button class="btn btn-primary" type="submit">Send mail</button-->
+    <button class="btn btn-outline-secondary" type="button" id="pauseJob">Send email</button>
+
   </div>
 <% end %>

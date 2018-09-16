@@ -1,16 +1,14 @@
 $(document).ready(function () {
-  // clock
- let timeWatch = setInterval(getCurrentTime, 1000);
-
+ let timeWatch = setInterval(getCurrentTime, 1000); //CLOCK
   function getCurrentTime(){
     var d = new Date();
     let start = d.toLocaleTimeString();
-    if (document.getElementById("startTime")) {
-      document.getElementById("startTime").innerHTML = start;
+    if (document.getElementById("startTime")){
+       document.getElementById("startTime").innerHTML = start;
     }
-  } 
+  }
 
-  if ($('#job_duration').length === 0) {
+  if ($('#job_duration').length === 0){
     return;
   }
 
