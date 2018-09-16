@@ -1,8 +1,5 @@
 class PagesController < ApplicationController
   def home
-    # @now = Time.new 
+    # @now = Time.new
   end
-
-
-
 end

@@ -1,4 +1,5 @@
 class SessionController < ApplicationController
+
   def new
   end
 
@@ -8,7 +9,6 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to projects_path
-             #change page direction
     else
       flash[:error] = "Invalid email or password"
       redirect_to login_path

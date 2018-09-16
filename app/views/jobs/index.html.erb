@@ -2,7 +2,7 @@
 <p>Find me in app/views/jobs/index.html.erb</p>
 
 <% @jobs.each do |job| %>
-<p>
-  <%= link_to job.description, job_path(job.id) %>
-</p>
+ <p>
+ <%= link_to job.description, job_path(job.id) %>
+ </p>
 <% end %>

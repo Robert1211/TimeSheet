@@ -11,24 +11,21 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def create
+    project = Project.new
+    project.name = params[:project][:name]
+    project.description = params[:project][:description]
+    project.save
+    @current_user.projects << project
+    redirect_to new_job_path
+  end
 
- def create
-  project = Project.new
-  project.name = params[:project][:name]
-  project.description = params[:project][:description]
-  project.save
-  @current_user.projects << project
-  redirect_to new_job_path
-end
-
-def edit
+  def edit
   end
 
   def destroy
-      project = Project.find params[:id]
-      project.destroy
-      redirect_to projects_path
-    end
-
-
+    project = Project.find params[:id]
+    project.destroy
+    redirect_to projects_path
+  end
 end

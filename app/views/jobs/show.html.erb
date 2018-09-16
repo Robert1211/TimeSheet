@@ -2,53 +2,39 @@
 
   <div class="col-md-8 offset-md-3" class= "descriptions">
     <h2><%= @job.description %></h2>
-
-     <p>
-       Total time spent: <span><%= Time.at(@job.duration).utc.strftime("%H:%M:%S") %></span>
-     </p>
-
-     <p>Current Time: <span id="startTime"></span></p>
+    <p>Total time spent: <span><%= Time.at(@job.duration).utc.strftime("%H:%M:%S") %></span></p>
+    <p>Current Time: <span id="startTime"></span></p>
   </div>
 
   <div class="col-md-8 offset-md-3">
     <div class="controls">
-      <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
-      <!-- <button type="button" class="btn btn-danger">Delete</button> -->
-      <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
-      <!--button class="btn btn-primary" type="submit">Send mail</button-->
+     <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
     </div>
   </div>
-<% else %>
+  <% else %>
   <div class="col-md-8 offset-md-3" class= "descriptions">
     <h2><%= @job.description %></h2>
-
-     <p>
-       Total time spent: <span id="stopwatch" class="time" data-start="<%= @job.duration %>">00:00:00</span>
-     </p>
-
-     <div class="input-group mb-3">
-       <div class="input-group-append">
-         <%= form_for @job do |f| %>
-           <%= f.hidden_field :duration %>
-           <%= f.submit 'Job Finish', :class => 'btn btn-primary' %>
-         <% end %>
-       </div>
-
-     </div>
-     <p>Current Time: <span id="startTime"></span></p>
-     <p>Duration: <span id="duration" class="time">00:00:00</span></p>
+    <p>Total time spent: <span id="stopwatch" class="time" data-start="<%= @job.duration %>">00:00:00</span></p>
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <%= form_for @job do |f| %>
+            <%= f.hidden_field :duration %>
+            <%= f.submit 'Job Finish', :class => 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+    <p>Current Time: <span id="startTime"></span></p>
+    <p>Duration: <span id="duration" class="time">00:00:00</span></p>
   </div>
 
   <div class="col-md-8 offset-md-3">
     <div class="input-group mb-3">
       <div class="input-group-append">
-       <button class="btn btn-outline-secondary" type="button" id="pauseJob">Pause Job</button>
+        <button class="btn btn-outline-secondary" type="button" id="pauseJob">Pause Job</button>
       </div>
-  </div>
-  <div class="controls">
-    <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
-    <!-- <button type="button" class="btn btn-danger">Delete</button> -->
-    <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
-    <!--button class="btn btn-primary" type="submit">Send mail</button-->
+    </div>
+    <div class="controls">
+       <%= button_to 'Delete', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger' %>
+    </div>
   </div>
 <% end %>

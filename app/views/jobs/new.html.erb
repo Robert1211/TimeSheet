@@ -1,15 +1,12 @@
 
- <% if @current_user.present? %>
-  <h1 class="user-name"> <%= @current_user.name %></h1>
-  <%# TODO: get the last project OF THE  %>
-  <h2><%# Project.last.name %></h2>
-  <p><%# Project.last.description %></p>
-  <p> <%# Project.last.project_id %></p>
- <% end %>
-   <div class="row">
-    <div class="col-md-7 offset-md-2">
-     <div class="form-group login-box">
-       <%= form_for @job do |f| %>
+<% if @current_user.present? %>
+ <h1 class="user-name"> <%= @current_user.name %></h1>
+<% end %>
+
+<div class="row">
+  <div class="col-md-7 offset-md-2">
+    <div class="form-group login-box">
+      <%= form_for @job do |f| %>
 
         <%= f.label :description,'details'  %>
         <%= f.text_field :description, class: "form-control" %>
@@ -21,7 +18,8 @@
         <%= f.select :project_id, @current_user.projects.pluck(:name, :id), class: "form-control" %>
 
         <%= f.submit "Start project", class: "btn btn-primary" %>
-       <% end %>
-      </div>
-     </div>
+
+      <% end %>
     </div>
+  </div>
+</div>
