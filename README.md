@@ -32,12 +32,12 @@ Help me more understand build application like timesheet.
  open
  **Comments**
  In application.js
- //= require rails-ujs
- //= require activestorage
- //= require jquery
- //= require jquery.stopwatch
- //= require popper
- //= require bootstrap
- //= require vue
+  require rails-ujs
+  require activestorage
+  require jquery
+  require jquery.stopwatch
+  require popper
+  require bootstrap
+  require vue
 
- //= require_tree .
+  require_tree .

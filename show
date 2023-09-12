@@ -1,48 +1,52 @@
-
 <!-- <h1><%= @job.description %></h1> -->
 <h1>All details about you job</h1>
 <ul>
 
 
 
-  <li><%= @job.description %></li>
+  <li>
+    <%= @job.description %>
+  </li>
   <% if @job.description.present? %>
 
-  <% end %>
- <!-- <li>Name: <%= @job.description %></li>
+    <% end %>
+      <!-- <li>Name: <%= @job.description %></li>
   <li>Project: <%= @job.description %></li> -->
-----------------------
-  <% if @job.duration %>
-    <li>Duration: <span id="stopwatch" class="time" data-start="<%= @job.duration %>"><%= Time.at(@job.duration).utc.strftime("%H:%M:%S") %></span>
- </li>
-  <% else %>
-    <li>Time: <span id="stopwatch" class="time" data-start="<%= @job.duration %>">00:00:00</span>
-  <% end %>
+      ----------------------
+      <% if @job.duration %>
+        <li>Duration: <span id="stopwatch" class="time" data-start="<%= @job.duration %>">
+            <%= Time.at(@job.duration).utc.strftime("%H:%M:%S") %>
+          </span>
+        </li>
+        <% else %>
+          <li>Time: <span id="stopwatch" class="time" data-start="<%= @job.duration %>">00:00:00</span>
+            <% end %>
 
-    <%= button_to "Job finish", job_stop_path(@job)%></li>
-    <br>
-    <p>================</p>
-
-
-     <%# button_to "Pause job", job_stop_path(@job)%>
-     <p>Current Time:</p>
-    <div id="startTime"></div>
-    <p>Duration:</p>
-    <!-- <h2><time>00:00:00</time></h2> -->
-    <div id="duration" class="time">00:00:00</div>
-    <div id="outcome"></div>
-     <button id="pauseJob">Pause job</button>
+              <%= button_to "Job finish" , job_stop_path(@job)%>
+          </li>
+          <br>
+          <p>================</p>
 
 
-    <%# button_to "End pause", job_path(@job)%>
+          <%# button_to "Pause job" , job_stop_path(@job)%>
+            <p>Current Time:</p>
+            <div id="startTime"></div>
+            <p>Duration:</p>
+            <!-- <h2><time>00:00:00</time></h2> -->
+            <div id="duration" class="time">00:00:00</div>
+            <div id="outcome"></div>
+            <button id="pauseJob">Pause job</button>
+
+
+            <%# button_to "End pause" , job_path(@job)%>
 
 
 </ul>
 
 <div class="controls">
   <!-- <%= link_to 'Edit job', edit_job_path(@job) %> -->
-  <%= link_to 'Sand report', edit_job_path(@job) %>
-  <%= link_to 'Delete job', job_path(@job), :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+  <%= link_to 'Sand report' , edit_job_path(@job) %>
+    <%= link_to 'Delete job' , job_path(@job), :method=> 'delete', :data => { :confirm => 'Are you sure?' } %>
 </div>
 
 
