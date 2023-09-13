@@ -78,6 +78,11 @@ p {
   color: #daf6ff;
   text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
 
+
+  @media(max-width:375px) {
+    top: 82%;
+  }
+
   @media(max-width: 320px) {
     top: 82%;
   }
@@ -86,6 +91,10 @@ p {
     letter-spacing: 0.05em;
     font-size: 80px;
     padding: 5px 0;
+
+    @media(max-width: 375px) {
+      font-size: 47;
+    }
 
     @media(max-width: 320px) {
       // color: wheat;
@@ -97,6 +106,10 @@ p {
   .date {
     letter-spacing: 0.1em;
     font-size: 24px;
+
+    @media(max-width: 375px) {
+      font-size: 15px;
+    }
 
     @media(max-width: 320px) {
       font-size: 15px;
@@ -115,9 +128,16 @@ p {
 .text h2 {
   color: red;
 
+  @media(max-width: 375px) {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+  }
+
   @media(max-width: 320px) {
     font-size: 20px;
     text-align: center;
+    padding-top: 2px;
   }
 
 }
@@ -135,8 +155,13 @@ p {
 .text-center {
   font-size: 17px;
 
+  @media(max-width: 375px) {
+    font-size: 13px;
+    color: wheat;
+  }
+
   @media(max-width: 320px) {
-    font-size: 17px;
+    font-size: 13px;
     color: wheat;
   }
 
