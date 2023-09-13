@@ -1,10 +1,16 @@
 
 <div class= "container">
-<h1 class="click" class="col-md-6 offset-md-4" >Click Time </h1>
-<% if @current_user.present? %>
+ <h1 class="click" class="col-md-6 offset-md-4" >Click Time </h1>
+ <div class="text">
+  <h2>Free work timer app that lets you and your team track how much time you spend on tasks and activities.</h2>
+  <h2> Click Time is an excellent tool for both freelancers and full-time employees. </h2>
+  <h2>START TRACKING TIME — IT'S FREE!</h2>
+ </div>
+ <% if @current_user.present? %>
+
   <h2 class="col-md-6 offset-md-4" >Welcome  <%= @current_user.name %></h2>
   <!-- <%= @now %> -->
-<% end %>
+ <% end %>
 </div>
 
 <div id="clock">
