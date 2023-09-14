@@ -99,6 +99,11 @@ p {
     top: 82%;
   }
 }
+@media (max-width: 380px) {
+  #clock {
+    top: 82%;
+  }
+}
 @media (max-width: 375px) {
   #clock {
     top: 82%;
@@ -127,6 +132,11 @@ p {
 @media (max-width: 393px) {
   #clock .time {
     font-size: 47px;
+  }
+}
+@media (max-width: 380px) {
+  #clock .time {
+    font-size: 41px;
   }
 }
 @media (max-width: 375px) {
@@ -196,6 +206,13 @@ p {
     font-size: 26px;
     text-align: center;
     padding-top: 27px;
+  }
+}
+@media (max-width: 380px) {
+  .text h2 {
+    font-size: 21px;
+    text-align: center;
+    padding-top: 12px;
   }
 }
 @media (max-width: 375px) {
