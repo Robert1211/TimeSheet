@@ -51,6 +51,11 @@ div,
     font-size: 40px;
   }
 
+  @media(max-width: 394px) {
+    color: red;
+    font-size: 37px;
+  }
+
   @media(max-width: 320px) {
     color: red;
     font-size: 40px;
@@ -94,6 +99,10 @@ p {
     top: 82%;
   }
 
+  @media(max-width: 394px) {
+    top: 82%;
+  }
+
   @media(max-width: 393px) {
     top: 82%;
   }
@@ -123,8 +132,12 @@ p {
       font-size: 44px;
     }
 
+    @media(max-width: 394px) {
+      font-size: 35px;
+    }
+
     @media(max-width: 393px) {
-      font-size: 47px;
+      font-size: 35px;
     }
 
     @media(max-width: 380px) {
@@ -154,12 +167,16 @@ p {
       font-size: 15px;
     }
 
+    @media(max-width: 394px) {
+      font-size: 12px;
+    }
+
     @media(max-width: 393px) {
-      font-size: 15px;
+      font-size: 12px;
     }
 
     @media(max-width: 375px) {
-      font-size: 15px;
+      font-size: 12px;
     }
 
     @media(max-width: 320px) {
@@ -192,10 +209,16 @@ p {
     padding-top: 2px;
   }
 
+  @media(max-width: 394px) {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 0px;
+  }
+
   @media(max-width: 393px) {
     font-size: 26px;
     text-align: center;
-    padding-top: 27px;
+    padding-top: 12px;
   }
 
   @media(max-width: 380px) {
@@ -242,8 +265,13 @@ p {
     color: wheat;
   }
 
+  @media(max-width: 394px) {
+    font-size: 12px;
+    color: wheat;
+  }
+
   @media(max-width: 393px) {
-    font-size: 15px;
+    font-size: 13px;
     color: wheat;
   }
 
