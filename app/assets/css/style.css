@@ -30,6 +30,11 @@ div,
     font-size: 27px;
   }
 }
+@media (max-width: 320px) {
+  .nav a {
+    font-size: 21px;
+  }
+}
 
 .container {
   color: white;
@@ -189,7 +194,7 @@ p {
 }
 @media (max-width: 320px) {
   #clock .time {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 #clock .date {
@@ -234,7 +239,7 @@ p {
 }
 @media (max-width: 320px) {
   #clock .date {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 20px;
   }
 }
@@ -298,7 +303,7 @@ p {
 }
 @media (max-width: 320px) {
   .text h2 {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     padding-top: 2px;
   }
