@@ -6,6 +6,12 @@ body {
   font-size: 26px;
 }
 
+div,
+.descriptions {
+  color: white !important;
+  font-size: 24px;
+}
+
 .nav a {
   color: white;
   margin: auto;
@@ -152,5 +158,28 @@ p {
   .text-center {
     font-size: 13px;
     color: wheat;
+  }
+}
+
+.user-label-sign-up {
+  color: white;
+  text-align: center;
+}
+@media (max-width: 320px) {
+  .user-label-sign-up {
+    font-size: 2rem;
+  }
+}
+
+.form-group login-box {
+  color: red;
+}
+
+.btn-primary {
+  margin-top: 7px;
+}
+@media (max-width: 320px) {
+  .btn-primary {
+    margin-top: 7px;
   }
 }/*# sourceMappingURL=style.css.map */
