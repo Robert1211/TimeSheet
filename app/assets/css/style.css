@@ -44,6 +44,12 @@ div,
   text-align: center;
   font-family: "Secular One", sans-serif;
 }
+@media (max-width: 401px) {
+  .click {
+    color: red;
+    font-size: 40px;
+  }
+}
 @media (max-width: 320px) {
   .click {
     color: red;
@@ -83,7 +89,7 @@ p {
     top: 82%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 401px) {
   #clock {
     top: 82%;
   }
@@ -113,9 +119,9 @@ p {
     font-size: 47px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 401px) {
   #clock .time {
-    font-size: 47px;
+    font-size: 44px;
   }
 }
 @media (max-width: 393px) {
@@ -142,7 +148,7 @@ p {
     font-size: 15px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 401px) {
   #clock .date {
     font-size: 15px;
   }
@@ -178,11 +184,11 @@ p {
     padding-top: 27px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 401px) {
   .text h2 {
-    font-size: 26px;
+    font-size: 23px;
     text-align: center;
-    padding-top: 27px;
+    padding-top: 2px;
   }
 }
 @media (max-width: 393px) {
@@ -220,7 +226,7 @@ p {
     color: wheat;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 401px) {
   .text-center {
     font-size: 15px;
     color: wheat;
