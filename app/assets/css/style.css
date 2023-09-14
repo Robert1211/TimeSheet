@@ -141,29 +141,29 @@ p {
     font-size: 47px;
   }
 }
-@media (max-width: 401px) {
+@media (max-width: 400px) {
   #clock .time {
-    font-size: 44px;
+    font-size: 48px;
   }
 }
 @media (max-width: 394px) {
   #clock .time {
-    font-size: 43px;
+    font-size: 38px;
   }
 }
 @media (max-width: 393px) {
   #clock .time {
-    font-size: 43px;
+    font-size: 36px;
   }
 }
 @media (max-width: 380px) {
   #clock .time {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 @media (max-width: 375px) {
   #clock .time {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 @media (max-width: 320px) {
