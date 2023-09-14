@@ -53,7 +53,13 @@ div,
 @media (max-width: 394px) {
   .click {
     color: red;
-    font-size: 37px;
+    font-size: 43px;
+  }
+}
+@media (max-width: 393px) {
+  .click {
+    color: red;
+    font-size: 43px;
   }
 }
 @media (max-width: 320px) {
@@ -142,27 +148,27 @@ p {
 }
 @media (max-width: 394px) {
   #clock .time {
-    font-size: 35px;
+    font-size: 43px;
   }
 }
 @media (max-width: 393px) {
   #clock .time {
-    font-size: 35px;
+    font-size: 43px;
   }
 }
 @media (max-width: 380px) {
   #clock .time {
-    font-size: 41px;
+    font-size: 38px;
   }
 }
 @media (max-width: 375px) {
   #clock .time {
-    font-size: 47px;
+    font-size: 38px;
   }
 }
 @media (max-width: 320px) {
   #clock .time {
-    font-size: 47px;
+    font-size: 36px;
   }
 }
 #clock .date {
@@ -182,21 +188,25 @@ p {
 @media (max-width: 394px) {
   #clock .date {
     font-size: 12px;
+    margin-top: 7rem;
   }
 }
 @media (max-width: 393px) {
   #clock .date {
     font-size: 12px;
+    margin-top: 7rem;
   }
 }
 @media (max-width: 375px) {
   #clock .date {
     font-size: 12px;
+    margin-top: 5rem;
   }
 }
 @media (max-width: 320px) {
   #clock .date {
-    font-size: 15px;
+    font-size: 13px;
+    margin-top: 2rem;
   }
 }
 #clock .text {
@@ -224,14 +234,14 @@ p {
 }
 @media (max-width: 394px) {
   .text h2 {
-    font-size: 20px;
+    font-size: 27px;
     text-align: center;
-    padding-top: 0px;
+    padding-top: 12px;
   }
 }
 @media (max-width: 393px) {
   .text h2 {
-    font-size: 26px;
+    font-size: 27px;
     text-align: center;
     padding-top: 12px;
   }
@@ -245,7 +255,7 @@ p {
 }
 @media (max-width: 375px) {
   .text h2 {
-    font-size: 20px;
+    font-size: 21px;
     text-align: center;
     padding-top: 30px;
   }
