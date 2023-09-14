@@ -78,6 +78,11 @@ p {
   color: #daf6ff;
   text-shadow: 0 0 20px rgb(10, 175, 230), 0 0 20px rgba(10, 175, 230, 0);
 }
+@media (max-width: 400px) {
+  #clock {
+    top: 82%;
+  }
+}
 @media (max-width: 393px) {
   #clock {
     top: 82%;
@@ -98,14 +103,19 @@ p {
   font-size: 80px;
   padding: 5px 0;
 }
+@media (max-width: 400px) {
+  #clock .time {
+    font-size: 47px;
+  }
+}
 @media (max-width: 393px) {
   #clock .time {
-    font-size: 47;
+    font-size: 47px;
   }
 }
 @media (max-width: 375px) {
   #clock .time {
-    font-size: 47;
+    font-size: 47px;
   }
 }
 @media (max-width: 320px) {
@@ -116,6 +126,11 @@ p {
 #clock .date {
   letter-spacing: 0.1em;
   font-size: 24px;
+}
+@media (max-width: 400px) {
+  #clock .date {
+    font-size: 15px;
+  }
 }
 @media (max-width: 393px) {
   #clock .date {
@@ -140,6 +155,13 @@ p {
 
 .text h2 {
   color: red;
+}
+@media (max-width: 400px) {
+  .text h2 {
+    font-size: 26px;
+    text-align: center;
+    padding-top: 27px;
+  }
 }
 @media (max-width: 393px) {
   .text h2 {
@@ -169,6 +191,12 @@ p {
 }
 .text-center {
   font-size: 17px;
+}
+@media (max-width: 400px) {
+  .text-center {
+    font-size: 15px;
+    color: wheat;
+  }
 }
 @media (max-width: 393px) {
   .text-center {
