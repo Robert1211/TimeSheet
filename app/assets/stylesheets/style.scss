@@ -170,27 +170,28 @@ p {
     }
 
     @media(max-width: 401px) {
-      font-size: 15px;
+      font-size: 12px;
+      margin-top: 28px;
     }
 
     @media(max-width: 394px) {
       font-size: 12px;
-      margin-top: 7rem;
+      margin-top: 28px;
     }
 
     @media(max-width: 393px) {
       font-size: 12px;
-      margin-top: 7rem;
+      margin-top: 28px;
     }
 
     @media(max-width: 375px) {
       font-size: 12px;
-      margin-top: 5rem;
+      margin-top: 25px;
     }
 
     @media(max-width: 320px) {
       font-size: 13px;
-      margin-top: 2rem;
+      margin-top: 20px;
     }
 
   }
