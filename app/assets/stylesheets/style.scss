@@ -84,7 +84,8 @@ p {
   font-family: 'Share Tech Mono', monospace;
   color: #ffffff;
   text-align: center;
-  position: absolute;
+  // position: absolute;
+  display: contents;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
