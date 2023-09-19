@@ -74,6 +74,21 @@ div,
 
 
 
+
+  @media(max-width: 2000px) {
+    font-size: 85px;
+    padding-top: 51px;
+    padding-bottom: 36px;
+  }
+
+  @media(max-width: 1240px) {
+    font-size: 85px;
+    padding-top: 51px;
+    padding-bottom: 36px;
+  }
+
+
+
   @media(max-width: 1024px) {
     font-size: 85px;
     padding-top: 51px;
@@ -177,6 +192,14 @@ p {
     font-size: 80px;
     padding: 5px 0;
 
+    @media(max-width: 2000px) {
+      font-size: 53px;
+    }
+
+    @media(max-width: 1240px) {
+      font-size: 53px;
+    }
+
     @media(max-width: 1024px) {
       font-size: 43px;
     }
@@ -228,6 +251,16 @@ p {
   .date {
     letter-spacing: 0.1em;
     font-size: 24px;
+
+    @media(max-width: 2000px) {
+      font-size: 13px;
+      margin-top: 95px;
+    }
+
+    @media(max-width: 1240px) {
+      font-size: 13px;
+      margin-top: 95px;
+    }
 
     @media(max-width: 1024px) {
       font-size: 13px;
@@ -292,6 +325,20 @@ p {
 
 .text h2 {
   color: red;
+
+
+
+  @media(max-width: 2000px) {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 31px;
+  }
+
+  @media(max-width: 1240px) {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 31px;
+  }
 
   @media(max-width: 1024px) {
     font-size: 30px;
@@ -377,6 +424,11 @@ p {
 .text-center {
   font-size: 17px;
 
+  @media(max-width: 1240px) {
+    font-size: 15px;
+    color: wheat;
+  }
+
   @media(max-width: 414px) {
     font-size: 15px;
     color: wheat;
@@ -418,6 +470,10 @@ p {
     font-size: 2rem;
   }
 
+}
+
+.user-label-sign-in {
+  text-align: center;
 }
 
 .form-group login-box {
