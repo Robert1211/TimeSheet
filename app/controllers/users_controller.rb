@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :check_for_admin, :only => [:index]
   skip_before_action :verify_authenticity_token
+  before_action :check_for_admin, :only => [:index]
+  
   def index
     @users = User.all
   end
