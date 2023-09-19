@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
-  before_action :fetch_user
+  # before_action :fetch_user
   
   private
   def fetch_user
@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_for_login
+
     redirect_to login_path unless @current_user.present?
   end
 
