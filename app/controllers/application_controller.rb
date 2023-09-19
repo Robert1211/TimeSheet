@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  skip_before_action :verify_authenticity_token
-  # before_action :fetch_user
+  # skip_before_action :verify_authenticity_token
+  before_action :fetch_user
   
   private
   def fetch_user
