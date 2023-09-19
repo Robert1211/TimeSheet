@@ -2,7 +2,7 @@ class SessionController < ApplicationController
   
   def new
   end
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
   def create
     user = User.find_by :name => params[:name]
     user = User.find_by :email => params[:email]
