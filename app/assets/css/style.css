@@ -128,12 +128,16 @@ div,
   .click {
     color: red;
     font-size: 43px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 @media (max-width: 320px) {
   .click {
     color: red;
     font-size: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
@@ -267,6 +271,7 @@ p {
 @media (max-width: 320px) {
   #clock .time {
     font-size: 30px;
+    color: red;
   }
 }
 #clock .date {
@@ -451,6 +456,7 @@ p {
   font-size: 17px;
   position: absolute;
 }
+
 .text-center {
   font-size: 17px;
 }
