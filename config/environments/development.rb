@@ -71,4 +71,6 @@ Rails.application.configure do
   #config.reload_classes_only_on_change = false
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # config.cache_classes = false
+  #config.assets.compile = false
+  # config.assets.enabled = true
 end
