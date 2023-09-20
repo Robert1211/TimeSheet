@@ -273,7 +273,6 @@ p {
 @media (max-width: 320px) {
   #clock .time {
     font-size: 30px;
-    color: white;
   }
 }
 #clock .date {

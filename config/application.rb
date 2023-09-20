@@ -33,5 +33,7 @@ module TimesheetApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # confin below add on 20.09.2023
+    config.assets.enabled = true
   end
 end
