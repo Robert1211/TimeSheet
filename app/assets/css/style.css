@@ -122,14 +122,16 @@ div,
   .click {
     color: red;
     font-size: 43px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 @media (max-width: 393px) {
   .click {
     color: red;
     font-size: 43px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media (max-width: 320px) {
